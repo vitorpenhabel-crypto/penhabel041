@@ -6,6 +6,9 @@ h1 {
     color: rgb(0, 0, 0);
     font-style: italic;
     font-size: 60px;
+    text-align: justify;
+    text-align: center;
+    margin: auto;
 }
 h2{
     
