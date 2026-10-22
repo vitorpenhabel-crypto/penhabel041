@@ -40,6 +40,17 @@ h2, h3 {
     margin: 0 auto;
 }
 
+.card {
+    background-color: #161a1e;
+    border: 1px solid #262b32;
+    border-radius: 16px;
+    padding: 20px;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
 
 
 
