@@ -57,5 +57,56 @@
      <footer>
      velose e furiosos
      </footer>
+
+        <div class="carrossel-container">
+    <button class="btn-carrossel prev" onclick="mudarFoto(-1)">&#10094;</button>
+    
+    <div class="carrossel-slide">
+        <img src="fast-and-furious-1-1920-x-1080-tifluzne7zoizvyd.jpg" class="foto-carrossel ativa" alt="Primeiro Filme">
+        <img src="velozes e furiosos 777.jpeg" class="foto-carrossel" alt="Corridas">
+        <img src="images.jpeg" class="foto-carrossel" alt="Dominic Toretto">
+        <img src="veloses e furios familia.jpg" class="foto-carrossel" alt="Família Toretto">
+        <img src="em-andamento-gravações-do-novo-velozes-e-furiosos-11-alguém-v0-vwhaqwo3obxg1.jpg" class="foto-carrossel" alt="Novo Filme">
+    </div>
+    
+    <button class="btn-carrossel next" onclick="mudarFoto(1)">&#10095;</button>
+
+    <div class="legenda-carrossel">
+        <p id="texto-legenda">Se você gosta de carros potentes, corridas emocionantes e cenas de ação, a saga Velozes e Furiosos é perfeita para você.</p>
+    </div>
+</div>
+
+<script>
+    let indexFoto = 0;
+
+    const legendas = [
+        "Se você gosta de carros potentes, corridas emocionantes e cenas de ação, a saga Velozes e Furiosos é perfeita para você.",
+        "O primeiro filme da franquia foi lançado em 2001 e apresentou ao público o mundo das corridas de rua.",
+        "Um dos personagens mais conhecidos da franquia é Dominic Toretto, interpretado por Vin Diesel.",
+        "Uma coisa que chama atenção em Velozes e Furiosos é a importância dada à família.",
+        "Os filmes mudaram bastante desde o primeiro lançamento, mostrando missões maiores e cenas de ação impressionantes."
+    ];
+
+    function mudarFoto(direcao) {
+        const fotos = document.querySelectorAll('.foto-carrossel');
+        const elementoTexto = document.getElementById('texto-legenda');
+
+        fotos[indexFoto].classList.remove('ativa');
+        
+        indexFoto += direcao;
+        
+        if (indexFoto >= fotos.length) {
+            indexFoto = 0;
+        }
+        
+        if (indexFoto < 0) {
+            indexFoto = fotos.length - 1;
+        }
+        
+        fotos[indexFoto].classList.add('ativa');
+        elementoTexto.textContent = legendas[indexFoto];
+    }
+</script>
+
 </body>
 </html>
