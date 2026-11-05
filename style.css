@@ -92,3 +92,13 @@ img[class*="morango"]:hover {
 .navbar nav a:hover {
     color: #e50914;
 }
+
+p {
+    max-width: 800px;
+    margin: 20px auto;
+    padding-left: 15px;
+    border-left: 3px solid #e50914;
+    text-align: left;
+    line-height: 1.6;
+    font-size: 1.05rem;
+}
